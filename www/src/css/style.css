@@ -1,13 +1,16 @@
-@import './variables.css';
-@import './reset.css';
-@import '@fontsource/alegreya-sans-sc';
+@import './tooling/reset.css';
+@import './tooling/variables.css';
+@import 'animate.css/source/animate.css';
+
+@import '@fontsource-variable/josefin-sans';
+
+@import '../partials/Header/Header.css';
 
 html, body {
+    font-family: 'Josefin Sans Variable', sans-serif;
     background-color: var(--bg-one);
     color:white;
+    text-transform: uppercase;
+    font-weight: 700;
 }
 
-h1 {
-    font-family: 'Alegreya Sans SC', sans-serif;
-    font-size: 30px;
-}
