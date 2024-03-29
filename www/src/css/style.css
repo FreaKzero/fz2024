@@ -1,7 +1,6 @@
 @import './wat.css';
-
 body {
-    color: red;
+    background-color: green;
 }
 
 p {
