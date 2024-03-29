@@ -1,6 +1,8 @@
-@import './wat.css';
+@import './reset.css';
+
 body {
-    background-color: green;
+    background-color: grey;
+    color: red;
 }
 
 p {
