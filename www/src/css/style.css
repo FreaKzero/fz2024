@@ -1,0 +1,9 @@
+@import './wat.css';
+
+body {
+    color: red;
+}
+
+p {
+    color: blue;
+}

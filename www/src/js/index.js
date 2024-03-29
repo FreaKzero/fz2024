@@ -1,0 +1,1 @@
+import Vanta from 'vanta';

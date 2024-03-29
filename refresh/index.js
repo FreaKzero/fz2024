@@ -49,6 +49,8 @@ app.get('/client', (req, res) => {
 
     res.send(code);
 });
+
+// TODO: only check for build and dist
 chokidar.watch('../').on('all', (event, path) => {
     Stream.emit("push", "refresh", null);
 });
