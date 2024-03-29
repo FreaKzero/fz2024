@@ -10,7 +10,7 @@ const withBase = (confFunc) => {
           path: path.resolve(__dirname, "../dist")
         },
         plugins: [new HtmlWebpackPlugin({
-          template: './index.html'
+          template: './src/index.html'
         })],
         module: {
           rules: [

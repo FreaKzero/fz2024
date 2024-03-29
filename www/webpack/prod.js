@@ -6,7 +6,7 @@ const HtmlWebpackPlugin = require("html-webpack-plugin");
 const config = withBase((conf, merge, path) => merge({}, conf, {
     mode: "production",
     plugins: [new HtmlWebpackPlugin({
-      template: './index.html',
+      template: './src/index.html',
       filename: path.resolve(__dirname, "../dist", "index.html")
     }), new MiniCssExtractPlugin({
         filename: "[name].css",
