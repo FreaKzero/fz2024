@@ -16,7 +16,11 @@ const config = withBase((conf, merge, path) => merge({}, conf, {
         rules: [
             {
                 test: /\.css$/i,
-                use: [MiniCssExtractPlugin.loader, "css-loader", "postcss-loader"],
+                use: [
+                  MiniCssExtractPlugin.loader,
+                  {loader: 'css-loader',options: {sourceMap: true}},
+                  {loader: 'resolve-url-loader', options: { removeCR: true }},
+                  {loader: "postcss-loader", options: { sourceMap: true}}]
               },
               {
                 test: /\.js$/,

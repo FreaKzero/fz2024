@@ -12,7 +12,4 @@ const config = withBase((config, merge, path) => merge({}, config, {
     hot: false,
     liveReload: true
 }}));
-
-
-console.log(config)
 module.exports = config;
