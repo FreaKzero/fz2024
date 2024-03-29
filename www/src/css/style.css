@@ -1,10 +1,6 @@
+@import './variables.css';
 @import './reset.css';
-@import '@fontsource/roboto';
-
-:root {
-    --bg-one:  #0D1117;
-    --bg-two: #0D1117;
-}
+@import '@fontsource/alegreya-sans-sc';
 
 html, body {
     background-color: var(--bg-one);
@@ -12,7 +8,6 @@ html, body {
 }
 
 h1 {
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Alegreya Sans SC', sans-serif;
     font-size: 30px;
 }
-
