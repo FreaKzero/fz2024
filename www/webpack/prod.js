@@ -1,11 +1,14 @@
-const path = require("path");
+
 const withBase = require('./base');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
-
+const HtmlWebpackPlugin = require("html-webpack-plugin");
 
 const config = withBase((conf, merge, path) => merge({}, conf, {
     mode: "production",
-    plugins: [...conf.plugins, new MiniCssExtractPlugin({
+    plugins: [new HtmlWebpackPlugin({
+      template: './index.html',
+      filename: path.resolve(__dirname, "../dist", "index.html")
+    }), new MiniCssExtractPlugin({
         filename: "[name].css",
         chunkFilename: "[id].css"
       })],

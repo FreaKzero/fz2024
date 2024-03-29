@@ -1,10 +1,10 @@
 @import './reset.css';
 
 body {
-    background-color: grey;
     color: red;
 }
 
-p {
-    color: blue;
+h1 {
+    font-size: 30px;
+    color: black;
 }

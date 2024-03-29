@@ -6,16 +6,11 @@
         <title>Thomas Petrovic - Friends call me Pete!</title>
         <meta name="description" content="">
 
-        <meta name="viewport" content="width=device-width, initial-scale=1"><script defer src="main.bundle.js"></script>
-        
-
-        <script src="http://localhost:1337/client"></script>
-        <link rel="stylesheet" href="./style.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
     </head>
     <body>
-<h1>oh yeah asdf!</h1>
-<my-component first="Stencil" last="'Don't call me a framework' JS"></my-component>
-
+<%= require('html-loader!./src/partials/Header.html').default %>
+<div id="wat"></div>
 </body>
 </html>
 
