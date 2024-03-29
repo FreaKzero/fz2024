@@ -15,16 +15,21 @@ const withBase = (confFunc) => {
         module: {
           rules: [
             {
-              test: /\.css$/i,
-              use: ["style-loader", "css-loader", "postcss-loader"],
+              test: /\.css$/i,           
+              use: [
+              {loader: 'style-loader'},
+              {loader: 'css-loader',options: {sourceMap: true}},
+              {loader: 'resolve-url-loader', options: { removeCR: true }},
+              {loader: "postcss-loader", options: { sourceMap: true}}]
             },
-              {
-                  test: /\.js$/,
-                  exclude: /node_modules/,
-                  loader: 'babel-loader'
-                }
-          ]
-        }
+            {
+              test: /\.js$/,
+              exclude: /node_modules/,
+              loader: 'babel-loader'
+            }
+          ],
+        },
+
       };
       return confFunc(base, Object.assign, path);
 };
