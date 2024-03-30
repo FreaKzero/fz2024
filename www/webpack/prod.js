@@ -21,12 +21,8 @@ const config = withBase((conf, merge, path) => merge({}, conf, {
                   {loader: 'css-loader',options: {sourceMap: true}},
                   {loader: 'resolve-url-loader', options: { removeCR: true }},
                   {loader: "postcss-loader", options: { sourceMap: true}}]
-              },
-              {
-                test: /\.js$/,
-                exclude: /node_modules/,
-                loader: 'babel-loader'
-              }
+              }, 
+              ...conf.module.rules
         ]
     }
 }));
