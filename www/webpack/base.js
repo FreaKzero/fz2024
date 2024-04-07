@@ -7,7 +7,7 @@ const withBase = (confFunc) => {
         entry: "./src/js/index.js", 
         output: {
           filename: "[name].bundle.js", 
-          path: path.resolve(__dirname, "../dist")
+          path: path.resolve(__dirname, "../dist/assets")
         },
         plugins: [new HtmlWebpackPlugin({
           template: './src/index.html'
@@ -18,7 +18,7 @@ const withBase = (confFunc) => {
               test: /\.js$/,
               exclude: /node_modules/,
               loader: 'babel-loader'
-            }
+            },
           ],
         },
 
