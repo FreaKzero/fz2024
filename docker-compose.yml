@@ -3,6 +3,7 @@ version: '3.8'
 services:
   nginx:
     image: nginx:latest
+    container_name: fz2024-nginx
     ports:
       - "8080:80"
     volumes:
@@ -15,6 +16,7 @@ services:
     build:
       context: .
       dockerfile: ./conf/Dockerfile
+    container_name: fz2024-php
     volumes:
       - ./www:/var/www/html
       - ./conf/php.ini:/usr/local/etc/php/php.ini  
@@ -23,6 +25,7 @@ services:
 
   mailhog:
     image: mailhog/mailhog
+    container_name: fz2024-mail
     logging:
       driver: 'none'  
     ports:
