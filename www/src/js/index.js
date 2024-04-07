@@ -1,4 +1,5 @@
-import '../css/style.css';
+import '@/css/style.css';
 import './venta';
 import './wow';
-import '../partials/Header/Header';
+
+import '@/partials/Header/Header';

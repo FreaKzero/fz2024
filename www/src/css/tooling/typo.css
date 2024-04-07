@@ -1,0 +1,10 @@
+/*
+    min value, max value, min viewport width, max viewport width.
+*/
+
+
+.content {
+    h1 {
+        font-size: fluid(1rem, 5rem, 40rem, 120rem);
+    }    
+}

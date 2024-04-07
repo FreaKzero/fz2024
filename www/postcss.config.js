@@ -6,6 +6,7 @@ module.exports = {
         require("stylelint"),
         require('postcss-preset-env')({ stage: 1 }),
         require('cssnano')({normalizeUrl: false}),
-        require('postcss-nesting')
+        require('postcss-nesting'),
+        require('@lehoczky/postcss-fluid')
     ],
 }

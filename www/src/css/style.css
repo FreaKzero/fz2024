@@ -1,5 +1,7 @@
+
 @import './tooling/reset.css';
 @import './tooling/variables.css';
+@import './tooling/typo.css';
 @import 'animate.css/source/animate.css';
 
 @import '@fontsource-variable/josefin-sans';
@@ -13,4 +15,3 @@ html, body {
     text-transform: uppercase;
     font-weight: 700;
 }
-

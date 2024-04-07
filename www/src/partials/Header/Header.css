@@ -14,7 +14,6 @@
     & .type {
         z-index: 10;
         position: absolute;
-        font-size: 50px;
         left: 300px;
         top: 300px;
         z-index: 5;
