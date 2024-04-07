@@ -17,6 +17,14 @@ const config = withBase((conf, merge, path) => merge({}, conf, {
     ]
   },
   devServer: {
+    proxy: [
+      {
+        context: '/php',
+        target: 'http://localhost:8080',
+        secure: false,
+        prependPath: false,
+      }
+    ],
     static: {
         directory: path.join(__dirname, './dist'),
     },

@@ -7,7 +7,7 @@ services:
       - "8080:80"
     volumes:
       - ./conf/conf.d:/etc/nginx/conf.d
-      - ./www/dist:/var/www/html
+      - ./www:/var/www/html
     depends_on:
       - php
 
@@ -16,8 +16,8 @@ services:
       context: .
       dockerfile: ./conf/Dockerfile
     volumes:
-      - ./www/dist:/var/www/html
-      - ./conf/php.ini:/usr/local/etc/php/php.ini     
+      - ./www:/var/www/html
+      - ./conf/php.ini:/usr/local/etc/php/php.ini  
     depends_on:
       - mailhog
 
