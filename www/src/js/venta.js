@@ -2,8 +2,6 @@ import * as THREE from 'three';
 import NET from 'vanta/dist/vanta.net.min';
 
 document.addEventListener('DOMContentLoaded', function (event) {
-
-    
     NET({
         el: "#vanta",
         THREE: THREE,
