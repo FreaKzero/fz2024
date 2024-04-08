@@ -5,6 +5,22 @@
 
 .content {
     h1 {
-        font-size: fluid(1rem, 5rem, 40rem, 120rem);
-    }    
+        font-size: fluid(1rem, 5rem, 20rem, 120rem);
+    }
+
+    h2 {
+        font-size: fluid(1rem, 3.5rem, 20rem, 120rem);
+    }
+
+    h3 {
+        font-size: fluid(1rem, 3rem, 20rem, 120rem);
+    }
+
+    h4 {
+        font-size: fluid(1rem, 2.5rem, 20rem, 120rem);
+    }
+
+    h5 {
+        font-size: fluid(1rem, 2rem, 20rem, 120rem);
+    }
 }
