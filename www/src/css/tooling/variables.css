@@ -1,4 +1,8 @@
 :root {
-    --bg-one:  #0D1117;
+    --bg-one:  #010409;
     --bg-two: #0D1117;
+    --color-primary: #ffb600;
+    --color-content: #fff;
+    --color-content-2: #fff;
+    --font-primary: 'Josefin Sans Variable', sans-serif;
 }

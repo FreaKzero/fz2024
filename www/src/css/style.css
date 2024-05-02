@@ -2,16 +2,25 @@
 @import './tooling/reset.css';
 @import './tooling/variables.css';
 @import './tooling/typo.css';
+@import './tooling/base.css';
 @import 'animate.css/source/animate.css';
 
+
 @import '@fontsource-variable/josefin-sans';
+@import '@fontsource-variable/inter-tight';
 
 @import '../partials/Header/Header.css';
+@import '../partials/Nav/Nav.css';
 
 html, body {
-    font-family: 'Josefin Sans Variable', sans-serif;
+    font-family: 'Inter Tight Variable', sans-serif;
     background-color: var(--bg-one);
     color:white;
+    scroll-behavior: smooth;
+}
+
+h1, h2 {
+    font-family: 'Josefin Sans Variable', sans-serif;
     text-transform: uppercase;
     font-weight: 700;
 }

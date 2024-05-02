@@ -7,6 +7,6 @@ module.exports = {
         require('postcss-preset-env')({ stage: 1 }),
         require('cssnano')({normalizeUrl: false}),
         require('postcss-nesting'),
-        require('@lehoczky/postcss-fluid')
+        require('@lehoczky/postcss-fluid')({ min: "40rem", max: "120rem" })
     ],
 }
