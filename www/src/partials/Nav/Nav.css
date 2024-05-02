@@ -1,3 +1,13 @@
+@keyframes NavEnter { 
+  0% {
+    opacity: 0;
+    transform:translateX(-50px)
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
 nav {
 
   #btn-navigation {
@@ -50,12 +60,15 @@ nav {
   }
 
   .navigation-drawer {
-    position: absolute;
+    position: fixed;
     left: 0;
     top: 0;
-    background: black;
+    border-bottom: 1px solid #2c2c2c;
+    box-shadow: 0 0 0 0 rgb(0 0 0 / 85%);
+    background: linear-gradient(0deg, rgba(0,0,0,1) 0%, rgba(0,0,0,0.713344712885154) 22%, rgba(0,0,0,0) 100%);
+    backdrop-filter: blur(10px);
     display: block;
-    min-height: 50vh;
+    /* min-height: 50vh; */
     width: 100vw;
     z-index: 9000;
     transform: translateY(-100%);
@@ -64,14 +77,16 @@ nav {
 
     &.open {
       transform: translateY(0);
+      box-shadow: 0 10px 15px 0 rgb(0 0 0 / 85%);
     }
 
-    .content {
-      margin: 100px 0 0 20px;
+    .drawer-content {
+      padding: 90px 0 50px 0;
     }
   }
 
   .link {
+    text-transform: uppercase;
     display:block;
     width: 100%;
     font-family: var(--font-primary);
@@ -82,17 +97,56 @@ nav {
     background: none;
     transition: 0.4s;
     padding: 10px 5px 5px 60px;
+    
     &:hover, &:focus {
       box-shadow: inset 100vw 0 0 0 var(--color-primary);
       color: black;
       padding: 15px 5px 5px 80px;
+      
     }
+
+    &.active {
+      color: var(--color-primary);
+      &:hover {
+        color: black;
+      }
+      &:before {
+        content: "• "
+      }
+    }
+    
   }
+  .open .link:nth-child(1) {
+    animation: NavEnter 0.45s ease-in-out;
+    animation-fill-mode: both;
+    animation-delay: 0.3s;
+  }
+  .open .link:nth-child(2) {
+    animation: NavEnter 0.45s ease-in-out;
+    animation-fill-mode: both;
+    animation-delay: 0.4s;
+  }
+  .open .link:nth-child(3) {
+    animation: NavEnter 0.45s ease-in-out;
+    animation-fill-mode: both;
+    animation-delay: 0.5s;
+  }
+  .open .link:nth-child(4) {
+    animation: NavEnter 0.45s ease-in-out;
+    animation-fill-mode: both;
+    animation-delay: 0.6s;
+  }
+  .open .link:nth-child(5) {
+    animation: NavEnter 0.45s ease-in-out;
+    animation-fill-mode: both;
+    animation-delay: 0.8s;
+  }
+
 }
 
 .nav-icon {
-  position: absolute;
-  left: 15px;
-  top: 15px;
+  position: fixed;
+  right: 20px;
+  top: 20px;
   z-index: 9999;
 }

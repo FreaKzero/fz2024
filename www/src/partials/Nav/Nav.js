@@ -1,9 +1,31 @@
 const navBtn = document.getElementById('btn-navigation');
+const navigation = document.querySelector('.navigation');
+const navLinks = document.querySelectorAll('nav > div.navigation-drawer .link');
+const sections = document.querySelectorAll('section');
 
-navBtn.addEventListener('click', () => {
+const handleIntersection = (entries) => {
+  entries.forEach(entry => {
+    const navLink = document.querySelector(`nav a[href="#${entry.target.id}"]`);
+    if (navLink) {
+      if (entry.isIntersecting) {
+        navLink.classList.add('active');
+      } else {
+        navLink.classList.remove('active');
+      }
+    }
+  });
+};
+
+const toggleBar = (close) => {
   const openClass = 'open';
   const drawer = document.querySelector('.navigation-drawer');
   const icon = document.querySelector('#btn-navigation');
+
+  if (close) {
+    drawer.classList.remove(openClass);
+    icon.classList.remove(openClass);
+    return;
+  }
 
   if (drawer.classList.contains(openClass)) {
     drawer.classList.remove(openClass);
@@ -12,18 +34,29 @@ navBtn.addEventListener('click', () => {
     drawer.classList.add(openClass)
     icon.classList.add(openClass);
   }  
+}
+
+const isInViewport = (element) => {
+  const rect = element.getBoundingClientRect();
+  return (
+    rect.top >= 0 &&
+    rect.left >= 0 &&
+    rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
+    rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+  );
+};
+
+navigation.addEventListener('mouseleave', () => toggleBar(true));
+navLinks.forEach(elem => elem.addEventListener('click', () => toggleBar()));
+navBtn.addEventListener('click', () => toggleBar());
+
+document.addEventListener('keydown', (event) => {
+  if (event.key.toLowerCase() === "escape") {
+    toggleBar(true);
+  }
 });
 
-/*
-// Get the element
-var element = document.getElementById("yourElementId");
-
-// Check if the element has the class
-if (element.classList.contains("yourClassName")) {
-    // The element has the class
-    console.log("Element has the class");
-} else {
-    // The element doesn't have the class
-    console.log("Element does not have the class");
-}
-*/
+const observer = new IntersectionObserver(handleIntersection, { threshold: 0.5 });
+sections.forEach(section => {
+  observer.observe(section);
+});

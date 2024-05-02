@@ -2,25 +2,58 @@
     min value, max value, min viewport width, max viewport width.
 */
 
+.demo {
+    height: 100vh;
+    margin: 50px 100px;
+    background: var(--bg-one);
 
+}
 .content {
-    h1 {
-        font-size: fluid(1rem, 5rem, 20rem, 120rem);
-    }
-
     h2 {
-        font-size: fluid(1rem, 3.5rem, 20rem, 120rem);
+        font-size: fluid(2.5rem, 5rem);
+        padding-top: fluid(0.5rem, 1rem);
+        padding-left: fluid(0.4rem, 0.5rem);
+        background-color: var(--color-primary);
+        box-sizing: border-box;
+        color: black;
+        margin-bottom: 20px;
+        font-family: var(--font-primary);
+        text-transform: uppercase;
+        font-weight: bolder;
     }
 
     h3 {
-        font-size: fluid(1rem, 3rem, 20rem, 120rem);
+        font-size: fluid(2.2rem, 3.5rem);
+        box-sizing: border-box;
+        color: white;
+        margin-bottom: 15px;
+        font-family: var(--font-primary);
+        text-transform: uppercase;
+        font-weight: bolder;
+
+        &.bg {
+            background-color: var(--color-primary);
+            color: black;
+            padding-top: fluid(0.5rem, 0.9rem);
+            padding-left: fluid(0.3rem, 0.5rem);
+        }
     }
 
     h4 {
-        font-size: fluid(1rem, 2.5rem, 20rem, 120rem);
+        font-size: fluid(1.8rem, 2.5rem);
+        box-sizing: border-box;
+        color: white;
+        margin-bottom: 15px;
+        font-family: var(--font-primary);
+        text-transform: uppercase;
+        font-weight: bolder;
+        &.bg {
+            background-color: #FD0000;
+            color: black;
+            padding-top: fluid(0.5rem, 0.8rem);
+            padding-left: fluid(0.3rem, 0.5rem);
+        }
     }
 
-    h5 {
-        font-size: fluid(1rem, 2rem, 20rem, 120rem);
-    }
+
 }
