@@ -15,7 +15,6 @@ nav {
       .close {
         transform: translateY(0);
         opacity: 1;
-        stroke: black;
       }
 
       .icon {
@@ -31,29 +30,27 @@ nav {
       transform: translateY(100%);
       transition: all 0.3s ease-in-out;
       opacity: 0;
-      stroke: black;
     }
 
     & .icon {
-      transition: 0.15s ease-in-out;
+      transition: 0.3s ease-in-out;
     }
   
     & svg:hover {
       cursor: pointer;
 
      & .hex {
-      fill: transparent;
-      stroke: var(--color-content);
-      stroke-width: 4;
+      fill: var(--color-primary);
+      stroke: var(--color-primary);
      }
 
      & .close {
-      stroke: white;
+      stroke: black;
     }
 
 
      & .icon {
-      stroke: white;
+      stroke: var(--bg-one);
      }
 
     }

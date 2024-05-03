@@ -11,6 +11,7 @@
 
 @import '../partials/Header/Header.css';
 @import '../partials/Nav/Nav.css';
+@import '../partials/About/About.css';
 
 html, body {
     font-family: 'Inter Tight Variable', sans-serif;

@@ -2,24 +2,25 @@
 /* SVG INTERACTIVE ICONS ============================================ */
 .icon-wrapper {
   & .hex {
-    transition: 0.3s ease-in-out;
-		stroke-width: 0;
+    transition: all 0.3s ease-in-out;
+		fill: transparent;
   }
 
   & .icon {
-    transition: 0.15s ease-in-out;
+    transition: all 0.3s ease-in-out;
   }
 
   & svg:hover {
     cursor: pointer;
+
    & .hex {
-    fill: transparent;
-    stroke: var(--color-content);
-    stroke-width: 4;
+    fill: var(--color-primary);
+    stroke: var(--color-primary);
    }
 
    & .icon {
-    stroke: var(--color-content);
+    stroke: var(--bg-one);
+    
    }
   }
 }
