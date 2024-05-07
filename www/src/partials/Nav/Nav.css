@@ -9,7 +9,6 @@
 }
 
 nav {
-
   #btn-navigation {
     &.open {
       .close {
@@ -65,12 +64,12 @@ nav {
     background: linear-gradient(0deg, rgba(0,0,0,1) 0%, rgba(0,0,0,0.713344712885154) 22%, rgba(0,0,0,0) 100%);
     backdrop-filter: blur(10px);
     display: block;
-    /* min-height: 50vh; */
     width: 100vw;
     z-index: 9000;
     transform: translateY(-100%);
 	  transition-duration: .4s;
 	  transition-timing-function: cubic-bezier(.66, .01, .25, 1);
+    min-height: 100vh;
 
     &.open {
       transform: translateY(0);
@@ -82,6 +81,11 @@ nav {
     }
   }
 
+  @media screen and (min-width:720px) {
+    .navigation-drawer {
+      min-height: auto;
+    }
+  }
   .link {
     text-transform: uppercase;
     display:block;

@@ -12,7 +12,6 @@ h1, h2, h3, h4, h5 {
 
 }
 
-
 @keyframes headline {
     0% {
       background: transparent;
@@ -53,6 +52,18 @@ h1, h2, h3, h4, h5 {
       padding: 1.5rem 1.5rem 0 1.5rem;
       font-size: 1.2rem;
       line-height: 1.6rem;
+    }
+
+    a {
+      box-shadow: inset 0 0 0 0 var(--color-primary);
+      color: var(--color-primary);
+      transition: color .2s ease, box-shadow .3s ease;
+      text-decoration: none;
+
+      &:hover {
+        color: black;
+        box-shadow: inset 200px 0 0 0 var(--color-primary);
+      }
     }
 
     p {
