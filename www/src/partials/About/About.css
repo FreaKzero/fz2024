@@ -1,4 +1,23 @@
 #about {
-  background: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxNSIgaGVpZ2h0PSIxNSI+CjxyZWN0IHdpZHRoPSI1MCIgaGVpZ2h0PSI1MCIgZmlsbD0iIzI4MjgyOCI+PC9yZWN0Pgo8Y2lyY2xlIGN4PSIzIiBjeT0iNC4zIiByPSIxLjgiIGZpbGw9IiMzOTM5MzkiPjwvY2lyY2xlPgo8Y2lyY2xlIGN4PSIzIiBjeT0iMyIgcj0iMS44IiBmaWxsPSJibGFjayI+PC9jaXJjbGU+CjxjaXJjbGUgY3g9IjEwLjUiIGN5PSIxMi41IiByPSIxLjgiIGZpbGw9IiMzOTM5MzkiPjwvY2lyY2xlPgo8Y2lyY2xlIGN4PSIxMC41IiBjeT0iMTEuMyIgcj0iMS44IiBmaWxsPSJibGFjayI+PC9jaXJjbGU+Cjwvc3ZnPg==");
   min-height: 100vh;
+  background-size: cover;
+  background-image: url('../../assets/city.png');
+  background-position-y: -400px;
+  background-repeat: no-repeat;
+  transition: background-position 1.4s ease-in-out;
+
+  &.inscreen {
+    background-position-y: 0;
+  }
+
+  @media screen and (min-width:720px) {
+    .flex {
+      display: flex;
+      flex-wrap: nowrap;
+      & > div {
+        margin-right: 15px;
+      }
+    }
+  
+  }
 }

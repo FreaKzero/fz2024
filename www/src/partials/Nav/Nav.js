@@ -6,11 +6,15 @@ const sections = document.querySelectorAll('section');
 const handleIntersection = (entries) => {
   entries.forEach(entry => {
     const navLink = document.querySelector(`nav a[href="#${entry.target.id}"]`);
+    const sect = document.getElementById(entry.target.id);
+    
     if (navLink) {
       if (entry.isIntersecting) {
         navLink.classList.add('active');
+        sect.classList.add('inscreen');
       } else {
         navLink.classList.remove('active');
+        sect.classList.remove('inscreen');
       }
     }
   });
