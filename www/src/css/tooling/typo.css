@@ -1,12 +1,14 @@
-/*
-    min value, max value, min viewport width, max viewport width.
-*/
-
 .demo {
     height: 100vh;
     margin: 50px 100px;
     background: var(--bg-one);
 
+}
+
+h1, h2, h3, h4, h5 {
+  font-family: 'Josefin Sans Variable', sans-serif;
+  text-transform: uppercase;
+  font-weight: 700;
 }
 
 
@@ -37,9 +39,23 @@
     animation-delay: 0.6s;
     background: transparent !important;
   }
-.content {
+
+.typo {
+    margin-left: fluid(2.5rem, 4.5rem);
+    margin-right: fluid(2.5rem, 4.5rem);
+
+    .content {
+      font-family: 'Kulim Park', sans-serif;
+      padding: 1.5rem;
+      font-size: 1.2rem;
+      line-height: 1.5rem;
+    }
+
+    p {
+      margin-bottom: 2.5rem;
+    }
     h2 {
-        font-size: fluid(2.5rem, 5rem);
+        font-size: fluid(2.5rem, 4rem);
         padding-top: fluid(0.5rem, 1rem);
         padding-left: fluid(0.4rem, 0.5rem);
         background-color: var(--color-primary);
@@ -52,19 +68,19 @@
     }
 
     h3 {
-        font-size: fluid(2.2rem, 3.5rem);
+        font-size: fluid(2.0rem, 3.0rem);
         box-sizing: border-box;
         color: white;
         margin-bottom: 15px;
         font-family: var(--font-primary);
         text-transform: uppercase;
         font-weight: bolder;
-
+        padding-top: fluid(0.5rem, 0.9rem);
         &.bg {
             background: var(--color-primary);
             color: black;
-            padding-top: fluid(0.5rem, 0.9rem);
             padding-left: fluid(0.3rem, 0.5rem);
+            
         }
     }
 

@@ -1,4 +1,3 @@
-
 @import './tooling/reset.css';
 @import './tooling/variables.css';
 @import './tooling/typo.css';
@@ -7,21 +6,14 @@
 
 
 @import '@fontsource-variable/josefin-sans';
-@import '@fontsource-variable/inter-tight';
+@import '@fontsource/kulim-park';
 
 @import '../partials/Header/Header.css';
 @import '../partials/Nav/Nav.css';
 @import '../partials/About/About.css';
 
 html, body {
-    font-family: 'Inter Tight Variable', sans-serif;
     background-color: var(--bg-one);
     color:white;
     scroll-behavior: smooth;
-}
-
-h1, h2 {
-    font-family: 'Josefin Sans Variable', sans-serif;
-    text-transform: uppercase;
-    font-weight: 700;
 }
